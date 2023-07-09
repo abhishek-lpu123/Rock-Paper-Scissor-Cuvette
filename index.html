@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock | Paper | Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="name">
+                <p>ROCK</p>
+                <p>PAPER</p>
+                <p>SCISSIOR</p>
+            </div>
+            <div class="scores">
+                <div class="user_score">
+                    <p>PLAYER</p>
+                    <p>SCORE</p>
+                    <p id="num1">0</p>
+                </div>
+                <div class="pc_score">
+                    <p>COMPUTER</p>
+                    <p>SCORE</p>
+                    <p id="num2">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="forHand">
+            <div class="hands">
+
+                <div class=" hand paper" onclick="SeletecH('Paper')">
+                    <img src="assets/Paper.svg" alt="paper" id="paper" >
+                </div>
+
+                <div class=" hand scissors" onclick="SeletecH('Scissors')">
+                    <img src="assets/Scissors.svg" alt="scissors" id="scissors" >
+                </div>
+
+                <div class=" hand rock" onclick="SeletecH('Rock')">
+                    <img src="assets/Rock.svg" alt="rock" id="rock" >
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="contest">
+            <div class="Uplayer">
+                <h1>You Picked</h1>
+                <div class="userImage">
+                    <img src="/assets/Paper.svg" alt="question" id="Upick">
+                </div>
+            </div>
+            <div class="middle">
+                <div class="decision">
+                    <h1 id="result">YOU WIN</h1>
+                    <h5>AGAINST PC</h5>
+                </div>
+                <button class="Playagain" onclick="playAgain()">Play Again</button>
+            </div>
+            <div class="Ucomputer">
+                <h1>PC Picked</h1>
+                <div class="pcImage">
+                    <img src="/assets/Rock.svg" alt="question" id="Cpick">
+                </div>
+            </div>
+        </div>
+
+        <div class="ruleBox">
+                <button class="close" onclick="hideRule()">X</button>
+                <div class="rules">
+                    <h1>Game Rules</h1>
+                    <ul>
+
+                        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                        <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock,
+                            paper, scissors.”</li>
+                        <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                        <li>If both players lay down the same hand, each player lays down another hand</li>
+                    </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="rules-btn" onclick="showRules()">RULES</button>
+            <button class="next-btn" id="next" onclick="winContainer()">NEXT</button>
+        </div>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
