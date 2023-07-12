@@ -34,6 +34,12 @@ body{
   font-size: 30px;
   font-weight: 600;
 }
+.title_img img{
+  height: 35px;
+  width: 35px;
+  background-color: #fff;
+  margin-left: 10px;
+}
 .user_score{
   width: 139px;
   height: 110px;
