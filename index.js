@@ -11,9 +11,10 @@ let p_border=document.querySelector(".pcImage")
 let result=document.querySelector("#result")
 let userScoreElem = document.querySelector("#num1");
 let computerScoreElem = document.querySelector("#num2");
-
-// localStorage.setItem("userScore", 0);
-// localStorage.setItem("computerScore", 0);
+if(localStorage.length==0){
+localStorage.setItem("userScore", 0);
+localStorage.setItem("computerScore", 0);
+}
 let userScore = Number(localStorage.getItem("userScore"));
 let ComScore = Number(localStorage.getItem("computerScore"));
 userScoreElem.innerHTML=userScore;
@@ -84,8 +85,10 @@ const comapreHands = (ushand,pchand)=>{
         result.innerHTML="TIE";
         result.style.textAlign="center";
         nextBtn.style.display="none";
-        ruleBtn.style.marginRight="100px"
-        playBtn.style.left="0px"
+        ruleBtn.style.marginRight="100px";
+        playBtn.style.left="0px";
+        u_border.style.animationPlayState="paused";
+        p_border.style.animationPlayState="paused";
     }
     else if((ushand==="Paper" && pchand==="Rock") || 
             (ushand==="Scissors" && pchand==="Paper")||
@@ -96,7 +99,9 @@ const comapreHands = (ushand,pchand)=>{
                 updateScore(userScore, ComScore);
                 nextBtn.style.display="inline-block";
                 ruleBtn.style.marginRight="25px";
-                playBtn.style.left="20px"
+                playBtn.style.left="20px";
+                p_border.style.animationPlayState="paused";
+                u_border.style.animationPlayState="running";
     }
     else{
         result.innerHTML="YOU LOST";
@@ -104,8 +109,11 @@ const comapreHands = (ushand,pchand)=>{
         localStorage.setItem("computerScore", ComScore);
         updateScore(userScore, ComScore);
         nextBtn.style.display="none";
-        ruleBtn.style.marginRight="100px"
-        playBtn.style.left="20px"
+        ruleBtn.style.marginRight="100px";
+        playBtn.style.left="20px";
+        u_border.style.animationPlayState="paused";
+        p_border.style.animationPlayState="running";
+
     }
     
 }
