@@ -7,24 +7,26 @@ body{
   background-color: rgb(31, 55, 87);
   font-family: "Roboto";
 }
-
-.image .star{
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+.trophy{
+    position: relative;
+    left: 44%;
+    top: 120px;
+    height: 150px;
+}
+.star{
     position: absolute;
-    top: 50px;
-    left: 425px;
+    top: 30px;
+    left: 35%;
     height: 225px;
 }
 
-.image .trophy{
-    position: relative;
-    left: 550px;
-    top: 150px;
-    height: 150px;
-}
 .text{
-    position: absolute;
-    top: 325px;
-    left: 38%;
+    position: relative;
+    top: 175px;
     text-align: center;
 }
 .text h1{
@@ -52,4 +54,13 @@ body{
 
 .text button:hover{
     transform: translateY(-1px);
+}
+
+@media screen and (max-width: 768px){
+    .star{
+        left: 15%;
+    }
+    .trophy{
+        left: 38%;
+    }
 }

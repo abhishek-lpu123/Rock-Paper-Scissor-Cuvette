@@ -11,9 +11,9 @@ body{
 .header{
   position: absolute;
   top: 40px;
-  left: 200px;
+  margin-left: 20%;
   height: 140px;
-  width: 850px;
+  width: 70%;
   border-radius: 10px;
   border: 2px solid #ffffff;
   display: flex;
@@ -63,7 +63,7 @@ body{
 }
 
 .forHand {
-    margin-top: 275px;
+  margin-top: 275px;
 }
 
 .hands {
@@ -79,7 +79,7 @@ body{
 .scissors {
   position: absolute;
   top: 225px;
-  left: 450px;
+  right: 52%;
   background-color: #fff;
   width: 125px;
   height: 125px;
@@ -93,7 +93,7 @@ body{
 .paper {
   position: absolute;
   top: 225px;
-  right: 450px;
+  left: 53%;
   background-color: #fff;
   width: 125px;
   height: 125px;
@@ -107,7 +107,6 @@ body{
 .rock{
   position: absolute;
   top: 425px;
-  left: 570px;
   background-color: #fff;
   width: 125px;
   height: 125px;
@@ -167,7 +166,7 @@ body{
 
 .footer{
   position: absolute;
-  right: 75px;
+  right: 13%;
   top: 550px;
 }
 
@@ -175,7 +174,6 @@ body{
   width: 100px;
   height: 40px;
   margin-top: 8px;
-  margin-right: 100px;
   background-color: transparent;
   color: #fff;
   border: 2px solid #fff;
@@ -190,7 +188,7 @@ body{
   width: 100px;
   height: 40px;
   margin-top: 8px;
-  margin-right: 25px;
+  margin-left: 25px;
   background-color: transparent;
   color: #fff;
   border: 2px solid #fff;
@@ -208,7 +206,6 @@ body{
 .Uplayer .userImage{
   position: absolute;
   top: 350px;
-  left: 200px;
   background-color: #fff;
   width: 125px;
   height: 125px;
@@ -221,14 +218,13 @@ body{
 }
 @keyframes ripple{
   0% { transform: scale(1); }
-  50% { transform: scale(1.3); opacity:1; }
-  100% { transform: scale(1); opacity:1; }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
 }
 .Ucomputer .pcImage
 {
   position: absolute;
   top: 350px;
-  right: 200px;
   background-color: #fff;
   width: 125px;
   height: 125px;
@@ -241,8 +237,8 @@ body{
 }
 @keyframes ripple{
   0% { transform: scale(1); }
-  50% { transform: scale(1.3); opacity:1; }
-  100% { transform: scale(1); opacity:1; }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
 }
 .middle .decision{
   position: relative;
@@ -268,4 +264,18 @@ body{
 }
 .middle .Playagain:hover{
   transform: translateY(-1px);
+}
+
+@media screen and (max-width: 768px){
+
+  .header{
+    margin-left:auto;
+    width: 100%;
+  }
+  .name{
+    font-size: 20px;
+  }
+  .footer{
+    right: 10%;
+  }
 }

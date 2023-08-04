@@ -72,7 +72,6 @@ const playAgain=()=>{
     hands.style.display = "inline-flex"
     contest.style.display="none"
     nextBtn.style.display="none";
-    ruleBtn.style.marginRight="100px"
 }
 
 const updateScore = (uScore, cScore) => {
@@ -85,7 +84,6 @@ const comapreHands = (ushand,pchand)=>{
         result.innerHTML="TIE";
         result.style.textAlign="center";
         nextBtn.style.display="none";
-        ruleBtn.style.marginRight="100px";
         playBtn.style.left="0px";
         u_border.style.animationPlayState="paused";
         p_border.style.animationPlayState="paused";
@@ -98,7 +96,7 @@ const comapreHands = (ushand,pchand)=>{
                 localStorage.setItem("userScore", userScore);
                 updateScore(userScore, ComScore);
                 nextBtn.style.display="inline-block";
-                ruleBtn.style.marginRight="25px";
+                // ruleBtn.style.marginRight="25px";
                 playBtn.style.left="20px";
                 p_border.style.animationPlayState="paused";
                 u_border.style.animationPlayState="running";
@@ -109,7 +107,6 @@ const comapreHands = (ushand,pchand)=>{
         localStorage.setItem("computerScore", ComScore);
         updateScore(userScore, ComScore);
         nextBtn.style.display="none";
-        ruleBtn.style.marginRight="100px";
         playBtn.style.left="20px";
         u_border.style.animationPlayState="paused";
         p_border.style.animationPlayState="running";
